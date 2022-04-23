@@ -30,4 +30,4 @@ After configuration, pass json payload to insert unique rows by StartOn, EndOn:
 ```
 
 ### Links
-// https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveMultipleQueryByAttribute
+https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveMultipleQueryByAttribute
