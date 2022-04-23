@@ -6,8 +6,6 @@ using System;
 using Microsoft.Xrm.Sdk.Messages;
 using System.Collections.Generic;
 
-// https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveMultipleQueryByAttribute
-
 namespace FunctionApp2.Services
 {
     public class DataverseService : IDataverseService, IDisposable
@@ -16,7 +14,7 @@ namespace FunctionApp2.Services
         
         private readonly string ConnectionString;
         private static Guid ruleId;
-        private string TimeEntityName = "msdyn_timeentry";
+        private readonly string TimeEntityName = "msdyn_timeentry";
         private HashSet<(DateTime start, DateTime end)> timesSet;
         public DataverseService()
         {

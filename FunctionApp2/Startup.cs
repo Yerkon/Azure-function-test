@@ -11,14 +11,7 @@ namespace MyNamespace
         public override void Configure(IFunctionsHostBuilder builder)
         {
             builder.Services.AddHttpClient();
-
-            //builder.Services.AddSingleton<IDataverserService>((s) => {
-            //    return new MyService();
-            //});
             builder.Services.AddSingleton<IDataverseService, DataverseService>();
-
-
-            //builder.Services.AddSingleton<ILoggerProvider, MyLoggerProvider>();
         }
     }
 }
