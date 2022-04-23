@@ -28,3 +28,6 @@ After configuration, pass json payload to insert unique rows by StartOn, EndOn:
   "EndOn": "2022-04-23 14:57"
 }
 ```
+
+### Links
+// https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveMultipleQueryByAttribute
