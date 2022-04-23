@@ -21,7 +21,7 @@ This sample creates local Azure function that accepts json payload to create rec
 
 ### Demonstrate
 
-After configuration, pass json payload to insert unique rows by StartOn, EndOn:
+After configuration, pass json payload for Azure function endpoint to insert unique rows by StartOn, EndOn:
 ```
 {
   "StartOn":"2022-04-23 10:56",
