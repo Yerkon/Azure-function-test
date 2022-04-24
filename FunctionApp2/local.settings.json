@@ -1,8 +1,0 @@
-{
-  "IsEncrypted": false,
-  "Values": {
-    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
-    "MyConnectionString": "AuthType=OAuth;Username=YerkebulanAbzhapbarov@abzhapbarov.onmicrosoft.com;Password=Hidden;Url=https://orgfb593fb1.crm4.dynamics.com;RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97"
-  }
-}
