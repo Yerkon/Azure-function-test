@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FunctionApp2
+namespace FunctionApp
 {
     public class ReqData
     {

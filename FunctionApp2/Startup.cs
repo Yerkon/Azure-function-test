@@ -1,10 +1,10 @@
-﻿using FunctionApp2.Services;
+﻿using FunctionApp.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: FunctionsStartup(typeof(MyNamespace.Startup))]
+[assembly: FunctionsStartup(typeof(FunctionApp.Startup))]
 
-namespace MyNamespace
+namespace FunctionApp
 {
     public class Startup : FunctionsStartup
     {

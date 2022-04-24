@@ -1,9 +1,11 @@
 ﻿using System;
 
-namespace FunctionApp2.Services
+namespace FunctionApp.Services
 {
     public interface IDataverseService
     {
+        bool? IsReady { get; }
+
         void CleanRecords();
         void ConfigureDublicateDetection();
         bool HasDublicate(DateTime start, DateTime end);

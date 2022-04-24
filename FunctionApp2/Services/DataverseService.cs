@@ -6,7 +6,7 @@ using System;
 using Microsoft.Xrm.Sdk.Messages;
 using System.Collections.Generic;
 
-namespace FunctionApp2.Services
+namespace FunctionApp.Services
 {
     public class DataverseService : IDataverseService, IDisposable
     {
@@ -18,11 +18,13 @@ namespace FunctionApp2.Services
         private HashSet<(DateTime start, DateTime end)> timesSet;
         public DataverseService()
         {
-            this.timesSet = new HashSet<(DateTime start, DateTime end)>();
+            timesSet = new HashSet<(DateTime start, DateTime end)>();
             ConnectionString = Environment.GetEnvironmentVariable("MyConnectionString");
             Console.WriteLine("Init DataverseService...");
             Configure();          
         }
+
+        public bool? IsReady => Service?.IsReady;
 
         public void Configure()
         {
@@ -37,7 +39,6 @@ namespace FunctionApp2.Services
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                //SampleHelpers.HandleException(ex);
             }
         }
 

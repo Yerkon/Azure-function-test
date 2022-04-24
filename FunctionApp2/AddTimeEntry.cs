@@ -1,4 +1,4 @@
-﻿using FunctionApp2.Services;
+﻿using FunctionApp.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -8,25 +8,29 @@ using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using System.Web.Http;
 
-namespace FunctionApp2
+namespace FunctionApp
 {
-    public class HttpExample
+    public class AddTimeEntry
     {
         private readonly IDataverseService dvService;
-        public HttpExample(IDataverseService dataverseService)
+        public AddTimeEntry(IDataverseService dataverseService)
         {
             dvService = dataverseService;
         }
 
-        [FunctionName("HttpExample")]
+        [FunctionName("AddTimeEntry")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req,
             ILogger log)
         {
             try
             {
                 log.LogInformation("C# HTTP trigger function processed a request.");
+                if (dvService.IsReady == null || !dvService.IsReady.Value)
+                    return new InternalServerErrorResult();
+
                 string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
                 var data = JsonConvert.DeserializeObject<ReqData>(requestBody);
                 string[] validationResult = data.GetValidationResult();
