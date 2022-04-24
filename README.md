@@ -16,12 +16,12 @@ This sample creates local Azure function that accepts json payload to create rec
 ### Setup
 
 1. DataverseService - Singleton service to initialize connection to Dataverse and contains the logic for validation duplicates
-2. HttpExample - Azure function, which handles requests.
+2. AddTimeEntry - Azure function, which handles requests.
 3. https://github.com/microsoft/PowerPlatform-DataverseServiceClient - for connection with with Dataverse
 
 ### Demonstrate
 
-After configuration, pass json payload for Azure function endpoint to insert unique rows by StartOn, EndOn:
+After configuration, pass json payload for Azure function POST endpoint(http://localhost:7071/api/AddTimeEntry) to insert unique rows by StartOn, EndOn:
 ```
 {
   "StartOn":"2022-04-23 10:56",
