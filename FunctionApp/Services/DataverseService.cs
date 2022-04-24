@@ -15,7 +15,7 @@ namespace FunctionApp.Services
         private readonly string ConnectionString;
         private static Guid ruleId;
         private readonly string TimeEntityName = "msdyn_timeentry";
-        private HashSet<(DateTime start, DateTime end)> timesSet;
+        private readonly HashSet<(DateTime start, DateTime end)> timesSet;
         public DataverseService()
         {
             timesSet = new HashSet<(DateTime start, DateTime end)>();

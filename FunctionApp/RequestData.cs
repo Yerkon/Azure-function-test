@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace FunctionApp
 {
-    public class ReqData
+    public class RequestData
     {
         public DateTime? StartOn { get; set; }
         public DateTime? EndOn { get; set; }

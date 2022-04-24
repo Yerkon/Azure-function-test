@@ -32,7 +32,7 @@ namespace FunctionApp
                     return new InternalServerErrorResult();
 
                 string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-                var data = JsonConvert.DeserializeObject<ReqData>(requestBody);
+                var data = JsonConvert.DeserializeObject<RequestData>(requestBody);
                 string[] validationResult = data.GetValidationResult();
                 if (validationResult.Length > 0)
                 {
