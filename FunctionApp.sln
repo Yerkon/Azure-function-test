@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataverseFunction", "FunctionApp\DataverseFunction.csproj", "{C74B9A90-A40C-4A15-BDB5-10D536FCEFAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataverseFunctionTests", "DataverseFunctionTests\DataverseFunctionTests.csproj", "{B2B8E110-AAB7-47A0-8B09-0D58C959B926}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C74B9A90-A40C-4A15-BDB5-10D536FCEFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C74B9A90-A40C-4A15-BDB5-10D536FCEFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C74B9A90-A40C-4A15-BDB5-10D536FCEFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2B8E110-AAB7-47A0-8B09-0D58C959B926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B8E110-AAB7-47A0-8B09-0D58C959B926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B8E110-AAB7-47A0-8B09-0D58C959B926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B8E110-AAB7-47A0-8B09-0D58C959B926}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
